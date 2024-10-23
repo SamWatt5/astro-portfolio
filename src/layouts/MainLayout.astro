@@ -1,5 +1,6 @@
 ---
-import TheExperience from "../components/TheExperience.vue";
+import Nav from "../components/nav.astro";
+import ThreeDApp from "../components/ThreeDApp.vue";
 import MainHead from "./MainHead.astro";
 
 const {title,seoTitle,seoDesc} = Astro.props;
@@ -7,10 +8,10 @@ const {title,seoTitle,seoDesc} = Astro.props;
 
 <html lang="en">
 	<MainHead title={title} seoTitle={seoTitle} seoDesc={seoDesc}></MainHead>
-	<body>
+	<body class="bg-sky-950 text-white">
+		<Nav></Nav>
 		<slot />
-		<!--<TheExperience client:load />-->
-		<p class="text-6xl">Hi</p>
+		<!--<ThreeDApp client:load />-->
 		<style>
 			body{
 				font-family: "Carlito", sans-serif;
