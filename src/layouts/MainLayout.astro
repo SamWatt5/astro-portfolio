@@ -1,0 +1,19 @@
+---
+import TheExperience from "../components/TheExperience.vue";
+import MainHead from "./MainHead.astro";
+
+const {title,seoTitle,seoDesc} = Astro.props;
+---
+
+<html lang="en">
+	<MainHead title={title} seoTitle={seoTitle} seoDesc={seoDesc}></MainHead>
+	<body>
+		<slot />
+		<TheExperience client:load />
+		<style>
+			body{
+				font-family: "Carlito", sans-serif;
+			}
+		</style>
+	</body>
+</html>
