@@ -9,7 +9,8 @@ const {title,seoTitle,seoDesc} = Astro.props;
 	<MainHead title={title} seoTitle={seoTitle} seoDesc={seoDesc}></MainHead>
 	<body>
 		<slot />
-		<TheExperience client:load />
+		<!--<TheExperience client:load />-->
+		<p class="text-6xl">Hi</p>
 		<style>
 			body{
 				font-family: "Carlito", sans-serif;
